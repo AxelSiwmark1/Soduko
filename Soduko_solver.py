@@ -32,3 +32,19 @@ def possible_solution(row, col, number, grid):
         for c in range(square_col, square_col + 3):
             if grid[r][c] == number:
                 return False
+    return True
+
+def solve(grid):
+    for row in range(0,9):
+        for col in range(0,9):
+            if grid[row][col] == 0:
+                for number in range(1,10):
+                    if possible_solution(row, col, number, grid):
+                        grid[row][col] = number
+                        solve(grid)
+                        grid[row][col] = 0
+                return
+    print(np.matrix(grid))
+
+
+solve(grid)
