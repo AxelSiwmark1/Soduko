@@ -12,8 +12,12 @@ def main():
     win.fill(background_color)
     #Create grid
     for i in range(0,10):
-        pygame.draw.line(win, (0,0,0), (50 + 50*i, 50), (50 + 50*i, 500), 2) #Vertical lines
-        pygame.draw.line(win, (0,0,0), (50, 50 + 50*i), (500, 50 + 50*i), 2) #Horizontal lines
+        if(i%3 == 0):
+            thickness = 4
+        else:
+            thickness = 2            
+        pygame.draw.line(win, (0,0,0), (50 + 50*i, 50), (50 + 50*i, 500), thickness) #Vertical lines
+        pygame.draw.line(win, (0,0,0), (50, 50 + 50*i), (500, 50 + 50*i), thickness) #Horizontal lines
     pygame.display.update()
 
 
