@@ -26,6 +26,7 @@ def main():
         pygame.draw.line(win, (0,0,0), (50, 50 + 50*i), (500, 50 + 50*i), thickness) #Horizontal lines
     pygame.display.update()
 
+    #Create number for starting grid
     for r in range(0, len(grid[0])):
         for c in range(0, len(grid[0])):
             if grid[r][c] is not None:
