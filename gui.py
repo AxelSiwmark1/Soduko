@@ -20,7 +20,7 @@ def insert(win, position):
                 return
             if event.type == pygame.KEYDOWN:
                 #1 tries to edit original grid
-                if grid[r-1][c-1] is not None:
+                if grid_orginal[r-1][c-1] is not None:
                     return
                 #2 edit, 48 = 0 ascii
                 if(event.key == 48):
