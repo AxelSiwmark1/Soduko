@@ -1,6 +1,5 @@
 import numpy as np
 import pygame
-import requests
 from sudoku import Sudoku
 
 WIDTH = 550
@@ -69,7 +68,7 @@ def main():
     while True:
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONUP and event.button == 1:
-                pos = pygame.mouse.get_pos
+                pos = pygame.mouse.get_pos()
                 insert(win, (pos[0]//50, pos[1]//50))
             if event.type == pygame.QUIT:
                 pygame.quit()
